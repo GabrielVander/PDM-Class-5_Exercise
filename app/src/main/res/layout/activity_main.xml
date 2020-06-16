@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/lblName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:text="Name:"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/txtName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:ems="10"
+        android:hint="Insert your name here"
+        android:inputType="textPersonName"
+        android:textSize="18sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/lblName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/lblName" />
+
+    <TextView
+        android:id="@+id/lblEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Email:"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/lblName"
+        app:layout_constraintTop_toBottomOf="@+id/lblName" />
+
+    <EditText
+        android:id="@+id/txtEmail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:ems="10"
+        android:hint="Insert your email here"
+        android:inputType="textEmailAddress"
+        app:layout_constraintBaseline_toBaselineOf="@+id/lblEmail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/lblEmail" />
+
+    <TextView
+        android:id="@+id/lblFirstGrade"
+        android:layout_width="93dp"
+        android:layout_height="19dp"
+        android:layout_marginTop="60dp"
+        android:text="First Grade:"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/lblEmail"
+        app:layout_constraintTop_toBottomOf="@+id/lblEmail" />
+
+    <TextView
+        android:id="@+id/lblSecondGrade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Second Grade:"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/lblFirstGrade"
+        app:layout_constraintTop_toBottomOf="@+id/lblFirstGrade" />
+
+    <EditText
+        android:id="@+id/txtFirstGrade"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:ems="10"
+        android:hint="Insert your first grade"
+        android:inputType="number"
+        app:layout_constraintBaseline_toBaselineOf="@+id/lblFirstGrade"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/lblFirstGrade" />
+
+    <EditText
+        android:id="@+id/txtSecondGrade"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="24dp"
+        android:ems="10"
+        android:hint="Insert your second grade"
+        android:inputType="number"
+        app:layout_constraintBaseline_toBaselineOf="@+id/lblSecondGrade"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/lblSecondGrade" />
+
+    <TextView
+        android:id="@+id/lblAverage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:text="Average:"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/lblSecondGrade"
+        app:layout_constraintTop_toBottomOf="@+id/lblSecondGrade" />
+
+    <TextView
+        android:id="@+id/txtAverage"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:text="The average of your grades will appear here"
+        app:layout_constraintBaseline_toBaselineOf="@+id/lblAverage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/lblAverage" />
+
+    <Button
+        android:id="@+id/btnCalc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="68dp"
+        android:text="Calculate"
+        app:layout_constraintEnd_toStartOf="@+id/btnShow"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblAverage" />
+
+    <Button
+        android:id="@+id/btnShow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Show"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnCalc"
+        app:layout_constraintEnd_toStartOf="@+id/btnExit"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnCalc" />
+
+    <Button
+        android:id="@+id/btnExit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:text="Exit"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnCalc"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnShow" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
